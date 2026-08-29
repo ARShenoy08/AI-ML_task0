@@ -1,0 +1,32 @@
+from matplotlib import pyplot as plt
+import pandas as pd
+df = pd.read_csv('processed_student_performance.csv')
+xstud=df["Student"].tolist()
+yscore=df["Final_Score"].tolist()
+plt.bar(xstud,yscore)
+plt.title("Student Final Scores")
+plt.xlabel("Students")
+plt.ylabel("Final Scores")
+plt.savefig('final_scores.png')#The graph could not fit 80 names together so the formatting seems a little off
+plt.show()
+xhr=df["Hours_Studied"].tolist()
+plt.scatter(xhr,yscore)
+plt.title("Hours Studied vs Final Scores")
+plt.xlabel("Hours Studied")
+plt.ylabel("Final Scores")
+plt.savefig('study_vs_score.png')
+plt.show()
+plt.hist(yscore)
+plt.title('Score Distribution')
+plt.xlabel('Final Score')
+plt.ylabel('Frequency')
+plt.savefig('Score_Distribution.png')
+plt.show()
+xatt=df["Attendance"]
+plt.scatter(xatt,yscore)
+plt.title('Attendance vs Final Scores')
+plt.xlabel('Attendance')
+plt.ylabel('Final Score')
+plt.savefig('custom_plot.png')
+plt.show()
+
