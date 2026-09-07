@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv('student_performance.csv')
+df = pd.read_csv('./data/student_performance.csv')
 print(df.head())
 print("Rows and Columns:", df.shape)
 print("Columns:")
@@ -19,7 +19,7 @@ ha = df[df['Attendance'] >= 80]
 print("Students with Attendance >= 80:\n", ha["Student"])
 df_sorted = df.sort_values(by='Final_Score', ascending=False)
 print("Sorted DataFrame:\n", df_sorted)
-df_sorted.to_csv('processed_student_performance.csv', index=False)
+df_sorted.to_csv('./data/processed_student_performance.csv', index=False)
 
 
 
