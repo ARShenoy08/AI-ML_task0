@@ -1,6 +1,6 @@
 from matplotlib import pyplot as plt
 import pandas as pd
-df = pd.read_csv('processed_student_performance.csv')
+df = pd.read_csv('./data/processed_student_performance.csv')
 xstud=df["Student"].tolist()
 yscore=df["Final_Score"].tolist()
 plt.bar(xstud,yscore)
